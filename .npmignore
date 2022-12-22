@@ -1,0 +1,11 @@
+.scripts
+.travis.yml
+.vscode/
+Cargo.*
+**.rs
+*.tgz
+target/
+e2e/
+envuse.js
+rollup.config.js
+tests/

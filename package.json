@@ -1,0 +1,36 @@
+{
+  "name": "@envuse/wasm",
+  "version": "1.0.1",
+  "description": "This parse envuse file to know more, please read the [The standard library](https://github.com/jondotsoy/envuse-rust#the-standard-library).",
+  "main": "rollup.config.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "types": "./types.ts",
+  "scripts": {
+    "test": "vitest run",
+    "prepare": "rollup -c rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonDotsoy/envuse-wasm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonDotsoy/envuse-wasm/issues"
+  },
+  "homepage": "https://github.com/JonDotsoy/envuse-wasm#readme",
+  "devDependencies": {
+    "@wasm-tool/rollup-plugin-rust": "^2.3.3",
+    "chalk": "^5.2.0",
+    "rollup": "^3.7.5",
+    "rollup-plugin-ts": "^3.0.2",
+    "typescript": "^4.9.4",
+    "vitest": "^0.26.2"
+  }
+}

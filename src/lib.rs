@@ -1,19 +1,21 @@
-mod utils;
+use std::collections::BTreeMap;
 
-use wasm_bindgen::prelude::*;
-
-// When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
-// allocator.
-#[cfg(feature = "wee_alloc")]
-#[global_allocator]
-static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
+use envuse_parser::envuse::{self, Program};
+use serde_wasm_bindgen;
+use wasm_bindgen::prelude::wasm_bindgen;
+use wasm_bindgen::JsValue;
 
 #[wasm_bindgen]
-extern {
-    fn alert(s: &str);
+pub fn create_program(source: String, location: Option<String>) -> Result<JsValue, JsValue> {
+    Ok(serde_wasm_bindgen::to_value(&envuse::create_program(
+        source, location,
+    )?)?)
 }
 
 #[wasm_bindgen]
-pub fn greet() {
-    alert("Hello, asd!");
+pub fn parser_values(program_source: JsValue, values: JsValue) -> Result<JsValue, JsValue> {
+    let program: Program = serde_wasm_bindgen::from_value(program_source)?;
+    let v: BTreeMap<String, Option<String>> = serde_wasm_bindgen::from_value(values)?;
+
+    Ok(serde_wasm_bindgen::to_value(&program.parse(v))?)
 }

@@ -1,6 +1,11 @@
+!.gitignore
+!.npmignore
 /target
 **/*.rs.bk
 Cargo.lock
 bin/
 pkg/
 wasm-pack.log
+node_modules/
+*.tgz
+dist/
