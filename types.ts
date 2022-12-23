@@ -3,7 +3,7 @@ export interface Program {
 }
 
 export interface create_program {
-    (source: string, location: string | undefined): Program;
+    (source: string, location?: string): Program;
 }
 
 export interface parser_values {

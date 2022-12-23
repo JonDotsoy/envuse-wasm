@@ -2,7 +2,7 @@
   "name": "@envuse/wasm",
   "version": "1.0.2",
   "description": "This parse envuse file to know more, please read the [The standard library](https://github.com/jondotsoy/envuse-rust#the-standard-library).",
-  "main": "rollup.config.js",
+  "main": "dist/envuse.cjs.js",
   "publishConfig": {
     "access": "public"
   },
