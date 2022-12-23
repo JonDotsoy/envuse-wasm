@@ -39,7 +39,7 @@ describe("E2E", () => {
 
         beforeAll(async () => {
             await run(0, "npm", "install");
-        })
+        }, 30_000)
 
         it("should run app index.ts", async () => {
             const { exitCode, vars } = await run("node", "index.js")
@@ -56,7 +56,7 @@ describe("E2E", () => {
 
         beforeAll(async () => {
             await run(0, "npm", "install");
-        })
+        }, 30_000)
 
         it("should run app index.ts", async () => {
             const { exitCode, vars } = await run("node", "index.mjs")
@@ -73,7 +73,7 @@ describe("E2E", () => {
 
         beforeAll(async () => {
             await run(0, "npm", "install");
-        })
+        }, 30_000)
 
         it("should run app index.ts", async () => {
             const { exitCode, vars } = await run("npx", "ts-node", "index.ts")
