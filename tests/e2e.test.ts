@@ -45,8 +45,8 @@ describe("E2E", () => {
         const run = createRun(appDirectory)
 
         beforeAll(async () => {
-            await run(0, "npm", "install", "--ignore-scripts");
-        })
+            await run(0, "npm", "install", "--ignore-scripts", "--omit=dev", "--no-audit");
+        }, 30_000)
 
         it("should run app index.ts", async () => {
             const { exitCode, vars } = await run("node", "index.js")
@@ -62,8 +62,8 @@ describe("E2E", () => {
         const run = createRun(appDirectory)
 
         beforeAll(async () => {
-            await run(0, "npm", "install", "--ignore-scripts");
-        })
+            await run(0, "npm", "install", "--ignore-scripts", "--omit=dev", "--no-audit");
+        }, 30_000)
 
         it("should run app index.ts", async () => {
             const { exitCode, vars } = await run("node", "index.mjs")
@@ -79,8 +79,8 @@ describe("E2E", () => {
         const run = createRun(appDirectory)
 
         beforeAll(async () => {
-            await run(0, "npm", "install", "--ignore-scripts");
-        })
+            await run(0, "npm", "install", "--ignore-scripts", "--omit=dev", "--no-audit");
+        }, 30_000)
 
         it("should run app index.ts", async () => {
             const { exitCode, vars } = await run("npx", "ts-node", "index.ts")

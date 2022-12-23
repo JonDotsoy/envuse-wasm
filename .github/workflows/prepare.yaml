@@ -54,6 +54,7 @@ jobs:
           deno-version: v1.x
 
       - run: npm install
+      - run: npm install -g ts-node
 
       - run: npm test
 
