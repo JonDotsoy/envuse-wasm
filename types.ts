@@ -50,4 +50,4 @@ export interface Envuse {
     parser_values: parser_values,
 }
 
-export declare const envuse: () => Promise<Envuse>;
+export declare const loadEnvuse: () => Envuse;

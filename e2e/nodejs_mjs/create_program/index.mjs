@@ -1,11 +1,8 @@
-import { envuse } from "@envuse/wasm"
+import { loadEnvuse } from "@envuse/wasm"
 
-const bootstrap = async () => {
-    const { create_program } = await envuse()
 
-    const foo_program = create_program("FOO")
+const { create_program } = loadEnvuse()
 
-    console.log("###=>", JSON.stringify({ foo_program_type: typeof foo_program }))
-}
+const foo_program = create_program("FOO")
 
-bootstrap()
+console.log("###=>", JSON.stringify({ foo_program_type: typeof foo_program }))

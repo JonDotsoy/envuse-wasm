@@ -19,6 +19,17 @@ describe("E2E", () => {
                 program_3_type: "object",
             })
         })
+
+        it("create program async", async () => {
+            const res = await run("deno", "run", "index.async.ts")
+
+            expect(res.exitCode).toEqual(0)
+            expect(res.vars).containSubset({
+                program_1_type: "object",
+                program_2_type: "object",
+                program_3_type: "object",
+            })
+        })
     })
 
 
