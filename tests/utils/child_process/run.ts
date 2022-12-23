@@ -25,6 +25,9 @@ export const createRun = (dirname: string) => async (...cmdArgs: NewType): Promi
     const [expectExitCode, cmd, ...args] = d(cmdArgs);
 
     const inlineCmd = `${cmd} ${args.join(" ")}`;
+
+    console.log(chalk.green(`run > ${inlineCmd}`))
+
     const cmdStrMaxLen = 15;
     const cmdStr = inlineCmd.length > cmdStrMaxLen ? `${inlineCmd.substring(0, cmdStrMaxLen - 3)}...` : inlineCmd;
     const ps = spawn(cmd, args, {

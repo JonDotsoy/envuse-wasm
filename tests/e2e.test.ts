@@ -5,6 +5,13 @@ import { createRun } from "./utils/child_process/run"
 
 describe("E2E", () => {
 
+    beforeAll(async () => {
+        const appDirectory = resolve(`${__dirname}/../`)
+        const run = createRun(appDirectory)
+
+        await run(0, "npm", "run", "prepare")
+    }, 30_000)
+
     describe("Deno", () => {
         const appDirectory = resolve(`${__dirname}/../e2e/deno/create_program`)
         const run = createRun(appDirectory)
@@ -38,8 +45,8 @@ describe("E2E", () => {
         const run = createRun(appDirectory)
 
         beforeAll(async () => {
-            await run(0, "npm", "install");
-        }, 30_000)
+            await run(0, "npm", "install", "--ignore-scripts");
+        })
 
         it("should run app index.ts", async () => {
             const { exitCode, vars } = await run("node", "index.js")
@@ -55,8 +62,8 @@ describe("E2E", () => {
         const run = createRun(appDirectory)
 
         beforeAll(async () => {
-            await run(0, "npm", "install");
-        }, 30_000)
+            await run(0, "npm", "install", "--ignore-scripts");
+        })
 
         it("should run app index.ts", async () => {
             const { exitCode, vars } = await run("node", "index.mjs")
@@ -72,8 +79,8 @@ describe("E2E", () => {
         const run = createRun(appDirectory)
 
         beforeAll(async () => {
-            await run(0, "npm", "install");
-        }, 30_000)
+            await run(0, "npm", "install", "--ignore-scripts");
+        })
 
         it("should run app index.ts", async () => {
             const { exitCode, vars } = await run("npx", "ts-node", "index.ts")
