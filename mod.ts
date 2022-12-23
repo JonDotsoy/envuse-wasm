@@ -1,4 +1,4 @@
-import { envuse as envuseMjs } from "./dist/envuse.mjs"
+import { envuse as envuseEsm } from "./dist/envuse.esm.js"
 import { Envuse } from "./types.ts";
 
-export const envuse = (): Promise<Envuse> => envuseMjs()
+export const envuse = (): Promise<Envuse> => envuseEsm()
