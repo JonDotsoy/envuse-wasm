@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/JonDotsoy/envuse-wasm/compare/v1.1.1...v1.1.2) (2022-12-23)
+
+
+### Bug Fixes
+
+* resolve lib folder ([ff10071](https://github.com/JonDotsoy/envuse-wasm/commit/ff10071f601501803f061b80089b01d8a2a85789))
+
 ## [1.1.1](https://github.com/JonDotsoy/envuse-wasm/compare/v1.1.0...v1.1.1) (2022-12-23)
 
 
