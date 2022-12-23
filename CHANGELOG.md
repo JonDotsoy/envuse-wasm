@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/JonDotsoy/envuse-wasm/compare/v1.1.0...v1.1.1) (2022-12-23)
+
+
+### Miscellaneous Chores
+
+* release 1.1.1 ([e25bfa0](https://github.com/JonDotsoy/envuse-wasm/commit/e25bfa06b0f95c1e219ae482a8639c905ecd4695))
+
 ## [1.1.0](https://github.com/JonDotsoy/envuse-wasm/compare/v1.0.5...v1.1.0) (2022-12-23)
 
 
