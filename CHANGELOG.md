@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/JonDotsoy/envuse-wasm/compare/v1.0.5...v1.1.0) (2022-12-23)
+
+
+### Features
+
+* add support to sync and async load module ([4dc7b1b](https://github.com/JonDotsoy/envuse-wasm/commit/4dc7b1b60e7f8b0d51115d9dd209a59f77240f71))
+
 ## [1.0.5](https://github.com/JonDotsoy/envuse-wasm/compare/v1.0.4...v1.0.5) (2022-12-23)
 
 
