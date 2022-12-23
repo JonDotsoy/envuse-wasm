@@ -72,7 +72,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     needs: release-please
-    if: ${{ needs.release-please.steps.release.outputs.release_created }}
+    if: ${{ needs.release-please.outputs.release_created }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
