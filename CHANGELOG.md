@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.5](https://github.com/JonDotsoy/envuse-wasm/compare/v1.0.4...v1.0.5) (2022-12-23)
+
+
+### Features
+
+* upgrade types ([dbd0b50](https://github.com/JonDotsoy/envuse-wasm/commit/dbd0b5090ff299d61b6249e74c6ab820b6377694))
+
+
+### Miscellaneous Chores
+
+* release 1.0.5 ([887deec](https://github.com/JonDotsoy/envuse-wasm/commit/887deec1b0a26e989d7c4eb727a7ecf76fb9fa9f))
+
 ## 1.0.4 (2022-12-23)
 
 

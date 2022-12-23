@@ -1,6 +1,6 @@
 {
   "name": "@envuse/wasm",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "This parse envuse file to know more, please read the [The standard library](https://github.com/jondotsoy/envuse-rust#the-standard-library).",
   "exports": {
     "import": "./lib/envuse.mjs",
