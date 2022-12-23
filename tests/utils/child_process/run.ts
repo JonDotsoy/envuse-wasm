@@ -29,7 +29,6 @@ export const createRun = (dirname: string) => async (...cmdArgs: NewType): Promi
     const cmdStr = inlineCmd.length > cmdStrMaxLen ? `${inlineCmd.substring(0, cmdStrMaxLen - 3)}...` : inlineCmd;
     const ps = spawn(cmd, args, {
         cwd: dirname,
-        shell: "/bin/zsh"
     });
     let vars: Record<string, any> = {};
     const stdout: number[] = [];

@@ -9,3 +9,5 @@ wasm-pack.log
 node_modules/
 *.tgz
 dist/
+!.github
+!Cargo.lock

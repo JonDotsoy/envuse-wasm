@@ -9,3 +9,4 @@ e2e/
 envuse.js
 rollup.config.js
 tests/
+.github/
