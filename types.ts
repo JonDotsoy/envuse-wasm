@@ -1,5 +1,40 @@
-export interface Program {
+export interface Span {
+    start: number
+    end: number
+}
 
+export interface WithSpan {
+    span: Span
+}
+
+export interface Variable extends WithSpan {
+    comment?: { CommentBlock: CommentBlock }
+    name: string
+    variable_type?: string
+    options_variable_type?: Map<string, { OptionValue: OptionValue }>
+    default_value?: { DefaultValue: DefaultValue }
+    nullable: boolean
+}
+export interface OptionValue extends WithSpan {
+    value: string
+}
+export interface DefaultValue extends WithSpan {
+    value: string
+}
+export interface CommentBlock extends WithSpan {
+    raw: string[]
+}
+export interface Document extends WithSpan {
+    executable?: string
+    elements: (CommentBlock | Variable)[]
+}
+
+export interface Program {
+    location?: string
+    source: string
+    ast: {
+        Document: Document
+    }
 }
 
 export interface create_program {
@@ -7,7 +42,7 @@ export interface create_program {
 }
 
 export interface parser_values {
-    (program_source: Program, values: any): any;
+    (program_source: Program, values: Record<string, undefined | string>): Record<string, any>;
 }
 
 export interface Envuse {
