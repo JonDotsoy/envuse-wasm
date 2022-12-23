@@ -10,3 +10,6 @@ envuse.js
 rollup.config.js
 tests/
 .github/
+lib/.gitignore
+lib/envuse.cargo.js
+lib/envuse.async.cargo.js
