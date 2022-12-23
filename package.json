@@ -2,12 +2,17 @@
   "name": "@envuse/wasm",
   "version": "1.0.4",
   "description": "This parse envuse file to know more, please read the [The standard library](https://github.com/jondotsoy/envuse-rust#the-standard-library).",
-  "main": "dist/envuse.cjs.js",
+  "exports": {
+    "import": "./lib/envuse.mjs",
+    "require": "./lib/envuse.cjs",
+    "default": "./lib/envuse.cjs"
+  },
   "publishConfig": {
     "access": "public"
   },
   "directories": {
-    "test": "tests"
+    "test": "tests",
+    "lib": "lib"
   },
   "types": "./types.ts",
   "scripts": {
@@ -19,8 +24,8 @@
     "url": "git+https://github.com/JonDotsoy/envuse-wasm.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Jonathan Delgado <hi@jon.soy> (https://jon.soy)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/JonDotsoy/envuse-wasm/issues"
   },

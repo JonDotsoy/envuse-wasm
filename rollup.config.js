@@ -9,7 +9,8 @@ module.exports = {
         })
     ],
     output: [
-        { file: "dist/envuse.cjs.js",format: 'cjs', sourcemap:true },
-        { file: "dist/envuse.esm.js",format: 'esm', sourcemap:true },
+        { file: "lib/envuse.js",format: 'cjs', sourcemap:true },
+        { file: "lib/envuse.cjs",format: 'cjs', sourcemap:true },
+        { file: "lib/envuse.mjs",format: 'esm', sourcemap:true },
     ]
 }

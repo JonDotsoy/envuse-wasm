@@ -8,6 +8,6 @@ pkg/
 wasm-pack.log
 node_modules/
 *.tgz
-dist/
+lib/
 !.github
 !Cargo.lock
