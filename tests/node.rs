@@ -1,8 +1,7 @@
 #![cfg(target_arch = "wasm32")]
-use envuse_parser::envuse::Program;
+
 use envuse_wasm::{create_program, parser_values};
-use js_sys::eval;
-use std::{collections::BTreeMap, ops::Deref, option::Option};
+use std::{collections::BTreeMap, option::Option};
 use wasm_bindgen::JsValue;
 use wasm_bindgen_test::wasm_bindgen_test;
 use web_sys::console;
@@ -30,7 +29,7 @@ fn sample_build() {
     ]))
     .unwrap();
 
-    let res = parser_values(program.to_owned(), values).unwrap();
+    let res = parser_values(program.to_owned(), values, JsValue::undefined()).unwrap();
 
     console::log_1(&res);
 }
