@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/JonDotsoy/envuse-wasm/compare/v1.2.0...v1.3.0) (2023-01-11)
+
+
+### Features
+
+* upgrade envuse-parser at v0.8.0 ([49dc4ca](https://github.com/JonDotsoy/envuse-wasm/commit/49dc4ca8b2a5385aaef00020d93162ac43aa2958))
+
 ## [1.2.0](https://github.com/JonDotsoy/envuse-wasm/compare/v1.1.2...v1.2.0) (2023-01-06)
 
 
