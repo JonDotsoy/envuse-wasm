@@ -32,9 +32,9 @@ dependencies = [
 
 [[package]]
 name = "envuse-parser"
-version = "0.8.0"
+version = "0.8.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5e79b4b5bf0a475873ca9696f95f6896eddca83f120b95b04d30cea99464b00e"
+checksum = "450166d6c54c1cd1522aae4f0e7e27d8a09075b39a0d2d4daca835288da73053"
 dependencies = [
  "serde",
 ]

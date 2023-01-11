@@ -7,6 +7,17 @@ edition = "2018"
 license = "MIT"
 repository = "https://github.com/JonDotsoy/envuse-wasm"
 homepage = "https://github.com/JonDotsoy/envuse-wasm"
+exclude = [
+    ".github/",
+    "e2e",
+    "lib",
+    "tests",
+    ".*",
+    "*.json",
+    "*.ts",
+    "*.js",
+    "*.toml",
+]
 
 [lib]
 crate-type = ["cdylib", "rlib"]
@@ -15,7 +26,7 @@ crate-type = ["cdylib", "rlib"]
 default = ["console_error_panic_hook"]
 
 [dependencies]
-envuse-parser = "0.8.0"
+envuse-parser = "0.8.2"
 serde = { version = "1.0", features = ["derive", "alloc"] }
 wasm-bindgen = { version = "0.2.83" }
 
@@ -42,3 +53,5 @@ wasm-bindgen-test = "0.3.13"
 [profile.release]
 # Tell `rustc` to optimize for small code size.
 opt-level = "s"
+
+
