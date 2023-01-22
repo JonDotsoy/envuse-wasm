@@ -29,6 +29,7 @@ fn program_error_to_js_value(
                 &"location".into(),
                 &serde_wasm_bindgen::to_value(&program_error.location)?.into(),
             )?;
+            js_sys::Reflect::set(&err_obj, &"__is_envuse_error".into(), &JsValue::TRUE)?;
             Ok(JsValue::from(err_obj))
         }
         _ => {
@@ -39,6 +40,7 @@ fn program_error_to_js_value(
                 &"location".into(),
                 &serde_wasm_bindgen::to_value(&location)?.into(),
             )?;
+            js_sys::Reflect::set(&err_obj, &"__is_envuse_error".into(), &JsValue::TRUE)?;
 
             Ok(JsValue::from(err_obj))
         }
