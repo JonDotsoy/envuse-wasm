@@ -48,7 +48,7 @@ export type TypeCustom = { Custom: [string, string] }
 export type CustomTypes = TypeString | TypeBoolean | TypeNumber | TypeCustom
 
 export interface parser_values {
-    (program_source: Program, values: Record<string, undefined | string>, customTypes?: string[]): Record<string, CustomTypes>;
+    (program_source: Program, values: Record<string, undefined | string>, customTypes?: string[]): Map<string, CustomTypes>;
 }
 
 export interface Envuse {
