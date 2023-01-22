@@ -68,10 +68,10 @@ pub fn parser_values(
 ) -> Result<JsValue, JsValue> {
     let parsed: Result<JsValue, Box<dyn std::error::Error>> = try {
         let program: Program = serde_wasm_bindgen::from_value(program_source)?;
-        let _custom_transformers: Option<Vec<String>> =
+        let custom_transformers: Option<Vec<String>> =
             serde_wasm_bindgen::from_value(custom_transformers_source)?;
         let v: BTreeMap<String, Option<String>> = serde_wasm_bindgen::from_value(values)?;
-        serde_wasm_bindgen::to_value(&program.parse(v, None)?)?
+        serde_wasm_bindgen::to_value(&program.parse(v, custom_transformers)?)?
     };
 
     match parsed {
