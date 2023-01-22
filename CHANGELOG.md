@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.5.0](https://github.com/JonDotsoy/envuse-wasm/compare/v1.4.0...v1.5.0) (2023-01-22)
+
+
+### Features
+
+* Append __is_envuse_error for program error ([df88f01](https://github.com/JonDotsoy/envuse-wasm/commit/df88f01a6ac2c093ea5a6e1bf6297c30c72cb4bd))
+* upgrade envuse-parse dependency ([270cdee](https://github.com/JonDotsoy/envuse-wasm/commit/270cdee6882ea41f4c7358f273d7f2b84b61cc21))
+* upgrade types and allow custom types ([dea00dc](https://github.com/JonDotsoy/envuse-wasm/commit/dea00dc627e35e9424a0191958e8a992899443cc))
+
 ## [1.4.0](https://github.com/JonDotsoy/envuse-wasm/compare/v1.3.0...v1.4.0) (2023-01-11)
 
 
