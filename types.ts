@@ -41,8 +41,14 @@ export interface create_program {
     (source: string, location?: string): Program;
 }
 
+export type TypeString = { String: string }
+export type TypeBoolean = { Boolean: boolean }
+export type TypeNumber = { Number: number }
+export type TypeCustom = { Custom: [string, string] }
+export type CustomTypes = TypeString | TypeBoolean | TypeNumber | TypeCustom
+
 export interface parser_values {
-    (program_source: Program, values: Record<string, undefined | string>): Record<string, any>;
+    (program_source: Program, values: Record<string, undefined | string>, customTypes?: string[]): Record<string, CustomTypes>;
 }
 
 export interface Envuse {

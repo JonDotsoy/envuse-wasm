@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/JonDotsoy/envuse-wasm#readme",
   "devDependencies": {
+    "@jondotsoy/demo-workspace": "^1.1.3",
     "@wasm-tool/rollup-plugin-rust": "^2.3.3",
     "chalk": "^5.2.0",
     "rollup": "^3.7.5",
